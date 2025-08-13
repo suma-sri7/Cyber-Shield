@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Data Breach Check</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <div class="min-h-screen flex flex-col items-center justify-center px-4">
+    <div class="bg-white rounded-2xl shadow-xl max-w-xl w-full p-8 text-center animate-fade-in">
+      <h1 class="text-2xl font-bold text-black mb-2">🕵️ Data Breach Check</h1>
+      <p class="text-gray-600 mb-6">Click the button below to explore possible data exposures.</p>
+
+      <button onclick="showOptions()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-300">
+        Check for Data Breach
+      </button>
+
+      <!-- Hidden Options Section -->
+      <div id="breachOptions" class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 hidden">
+        <!-- Leaked Passwords -->
+        <a href="https://haveibeenpwned.com/Passwords" target="_blank" class="block p-6 bg-red-100 hover:bg-red-200 rounded-xl shadow text-center">
+          <h2 class="text-lg font-bold text-red-700">🔑 Leaked Passwords</h2>
+          <p class="text-sm text-red-600 mt-2">Check if your passwords were exposed.</p>
+        </a>
+
+        <!-- Leaked Emails -->
+        <a href="https://haveibeenpwned.com" target="_blank" class="block p-6 bg-yellow-100 hover:bg-yellow-200 rounded-xl shadow text-center">
+          <h2 class="text-lg font-bold text-yellow-700">📧 Leaked Emails</h2>
+          <p class="text-sm text-yellow-600 mt-2">See if your emails were leaked.</p>
+        </a>
+      </div>
+
+      <div class="mt-6">
+        <a href="index.html" class="text-black hover:underline text-sm">← Back to Help Desk</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showOptions() {
+      document.getElementById('breachOptions').classList.remove('hidden');
+    }
+  </script>
+
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.6s ease-out;
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account Recovery Helper</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    select, textarea, button {
+      width: 100%;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .output {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-left: 4px solid #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Account Recovery Assistant</h2>
+    
+    <label for="accountType">Select Account Type:</label>
+    <select id="accountType">
+      <option value="">--Choose--</option>
+      <option value="email">Email Account</option>
+      <option value="social">Social Media</option>
+      <option value="bank">Bank Account</option>
+      <option value="gaming">Gaming Account</option>
+      <option value="others">Other</option>
+    </select>
+
+    <div id="recoveryOutput" class="output" style="display:none;"></div>
+
+    <button onclick="generateRecoverySteps()">Generate Recovery Steps</button>
+  </div>
+
+  <script>
+    const recoveryData = {
+      email: `
+        1. Try using the 'Forgot Password' option on the email provider's site.<br>
+        2. Do you remember any recovery email or phone number linked to this account?<br>
+        3. When was the last time you successfully accessed this account?<br>
+        4. Have you enabled two-factor authentication (2FA)? If yes, can you access that device?<br>
+        5. Visit the provider’s support page: Gmail - https://support.google.com/mail
+      `,
+      social: `
+        1. Visit the official login page and click 'Forgot Password'.<br>
+        2. What username/email/phone did you use?<br>
+        3. Do you have access to any linked recovery account?<br>
+        4. Were there any suspicious login alerts recently?<br>
+        5. Contact platform support: Instagram - https://www.instagram.com/hacked/
+      `,
+      bank: `
+        1. Immediately contact your bank's customer care.<br>
+        2. Can you visit a nearby branch with ID proof?<br>
+        3. Was your account linked to a phone/email?<br>
+        4. Check for unauthorized transactions and block the account if needed.<br>
+        5. Do not share sensitive OTPs or PINs.
+      `,
+      gaming: `
+        1. Go to the official game's login/recovery portal.<br>
+        2. When was the account created?<br>
+        3. Are there any previous receipts or usernames you remember?<br>
+        4. Check linked email for game receipts or recovery links.<br>
+        5. Try contacting support forums or the publisher directly.
+      `,
+      others: `
+        1. What type of service is it?<br>
+        2. Try searching for “ServiceName account recovery” on Google.<br>
+        3. Look for recovery options like email/phone/2FA.<br>
+        4. Contact customer support with relevant proofs.<br>
+        5. Keep all details (usernames, timestamps, device used) ready.
+      `
+    };
+
+    function generateRecoverySteps() {
+      const accountType = document.getElementById('accountType').value;
+      const output = document.getElementById('recoveryOutput');
+
+      if (recoveryData[accountType]) {
+        output.innerHTML = recoveryData[accountType];
+        output.style.display = 'block';
+      } else {
+        output.innerHTML = "Please select a valid account type.";
+        output.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

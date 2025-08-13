@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Shield: Security Awareness and Rescue System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+<!-- Navigation -->
+<header class="bg-white shadow">
+
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">
+      Cyber Shield: Security Awareness and Rescue System
+    </h1>
+
+    <nav class="flex items-center gap-4 text-sm">
+      <a href="#Helping topics" class="hover:text-blue-600">Helping topics</a>
+      <a href="#form" class="hover:text-blue-600">Get Executive Help</a>
+      <li><a href="attack_simulator.html" class="hover:text-blue-400">Cyber Attack Simulator</a></li>
+
+      
+
+      <!-- Login & Register/History Buttons -->
+      <a id="authBtn" href="login.html" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Login</a>
+      <a id="registerBtn" href="register.html" class="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700">Register</a>
+      <span id="userProfile" class="hidden bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full shadow-sm ml-4"></span>
+      <!-- Profile Circle -->
+<div class="relative inline-block text-left" id="profileMenuContainer">
+  <button id="profileBtn" class="hidden w-10 h-10 rounded-full bg-blue-600 text-white text-lg font-bold focus:outline-none focus:ring-2 focus:ring-blue-400">
+    A
+  </button>
+  <div id="profileDropdown" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+    <a href="account_details.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account Details</a>
+    <a href="change_password.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Change Password</a>
+    <a href="delete_account.php" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-50">Delete Account</a>
+    <button id="logoutBtn" class="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 font-semibold">Logout</button>
+
+  </div>
+</div>
+
+    </nav>
+  </div>
+</header>
+
+
+
+  
+    
+      </nav>
+      
+    </div>
+  </header>
+
+
+
+  <!-- Hero Section -->
+  <section class="bg-blue-50 py-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Facing a Cyber Threat?</h2>
+      <p class="text-lg mb-6">We're here to help you detect, understand, and recover from online scams, data breaches, and security incidents.</p>
+      
+    </div>
+  </section>
+
+<!input section>
+
+
+<div class="mb-6 flex flex-col items-center">
+  <center><label for="userQuery" class="block text-lg font-medium mb-2 self-start">Describe your issue</label></center>
+  
+  <!-- Styled input box -->
+<textarea id="userQuery"
+          placeholder="Type your cyber security question or issue here..."
+          aria-label="Cybersecurity help input"
+          rows="7"
+          class="w-full max-w-4xl p-4 border rounded-xl bg-white shadow-sm resize-none
+                 text-gray-800 placeholder-gray-400 border-gray-300 focus:outline-none 
+                 focus:ring-2 focus:ring-blue-500 transition duration-200 ease-in-out"></textarea>
+
+
+
+  <!-- Centered button -->
+  <button onclick="getHelp()" 
+          class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700 transition">
+    Get Help
+  </button>
+</div>
+
+    <!-- Suggestions -->
+    <div id="suggestions" class="bg-white p-6 rounded-xl shadow hidden">
+      <h3 class="text-xl font-semibold mb-3">Suggested Help:</h3>
+      <ul id="suggestionsList" class="list-disc list-inside text-gray-700"></ul>
+    </div>
+  </section>
+
+<!-- Help Form -->
+  <section id="form" class="bg-white py-16 px-4">
+    
+      <h3 class="text-2xl font-bold mb-6 text-center">Get Executive Help</h3>
+      <form action="https://formsubmit.co/team.cyber.helpdesk@gmail.com" method="POST" id="reportForm" class="space-y-6 bg-gray-50 p-6 rounded-xl shadow-md">
+        
+          <label class="block mb-1 font-semibold" for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2 border rounded-lg" />
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold" for="email">Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg" />
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold" for="issueType">Issue Type</label>
+          <select id="issueType" name="issueType" class="w-full px-4 py-2 border rounded-lg">
+            <option>Scam</option>
+            <option>Malware</option>
+            <option>Hacked Account</option>
+            <option>Data Leak</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold" for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border rounded-lg"></textarea>
+        </div>
+        
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700">Submit</button>
+        </form>
+    </div>
+  </section>
+<!-- Services Section -->
+<section id="Helping topics" class="py-12 bg-gray-100 text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">How can we help you?</h2>
+    <p class="text-gray-600 mb-8">Choose a service below to get started</p>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Account Recovery -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">Account Recovery</h3>
+        <p class="text-gray-600 mb-4">Lost access to an account? Let us guide you through recovery steps.</p>
+        <a href="account recovery.html" class="text-blue-600 font-semibold hover:underline transition duration-300">
+  Generate Recovery Steps
+</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+      <!-- Report a Scam -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-red-600 mb-2">Report a Scam</h3>
+        <p class="text-gray-600 mb-4">Received a suspicious message or link? Report it for investigation.</p>
+        <a href="report.html" class="text-red-500 hover:underline font-medium">Report Now</a>
+      </div>
+
+      <!-- Recover Hacked Account -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-purple-600 mb-2">Security audit</h3>
+        <p class="text-gray-600 mb-4">Is your digital life secure?Take a quick audit to check your online safety .</p>
+        <a href="security_audit.html" class="text-purple-500 hover:underline font-medium">Take the audit</a>
+      </div>
+
+      <!-- Delete Unused Accounts -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-green-600 mb-2">Delete Unused Accounts</h3>
+        <p class="text-gray-600 mb-4">Old accounts can be risky. We help you clean up your digital footprint.</p>
+        <a href="cleanup.html" class="text-green-500 hover:underline font-medium">Clean Up</a>
+      </div>
+
+      <!-- Dark Web Check -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-black mb-2">Data breach Check</h3>
+        <p class="text-gray-600 mb-4">Check if your data was found on the dark web or breached databases.</p>
+        <a href="darkweb.html" class="text-black hover:underline font-medium">Scan Now</a>
+      </div>
+
+      <!-- Custom Help -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Phishing link detection</h3>
+        <p class="text-gray-600 mb-4">Worried about suspicious links or messages? Submit them here to detect hidden threats.</p>
+        <a href="linkdetection.html" class="text-indigo-500 hover:underline font-medium">Analyse</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Live Tips / Alerts -->
+  <section id="tips" class="max-w-6xl mx-auto py-16 px-4">
+    <h3 class="text-2xl font-bold mb-6 text-center">Live Cybersecurity Tips</h3>
+    <ul class="space-y-4">
+      <li class="bg-yellow-100 border-l-4 border-yellow-500 p-4 rounded">
+        🔒 Never share OTPs or passwords, even with someone claiming to be support.
+      </li>
+      <li class="bg-red-100 border-l-4 border-red-500 p-4 rounded">
+        🚨 New phishing scam detected targeting bank users. Don’t click unknown links.
+      </li>
+      <li class="bg-green-100 border-l-4 border-green-500 p-4 rounded">
+        ✅ Use 2FA (Two Factor Authentication) on all important accounts.
+      </li>
+    </ul>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-4">About Cyber Shield: Security Awareness and Rescue System</h3>
+      <p class="text-gray-700 text-lg">We are a dedicated cybersecurity help center focused on providing free guidance and response to digital threats for individuals and small businesses.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-blue-600 text-white py-12 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-xl font-semibold mb-2">Need urgent help?</h3>
+      <p>Email us at: <a href="mailto:team.cyber.shield@gmail.com" class="underline">team.cyber.shield@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 text-center text-sm">
+    &copy; 2025 Cyber Shield: Security Awareness and Rescue System. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+
+
+ <script>
+  const authBtn = document.getElementById("authBtn");
+  const registerBtn = document.getElementById("registerBtn");
+  const profileBtn = document.getElementById("profileBtn");
+  const profileDropdown = document.getElementById("profileDropdown");
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  fetch("login_status.php")
+    .then(res => res.text())
+    .then(email => {
+      if (email !== "not_logged_in") {
+        // Hide Login/Register buttons
+        authBtn.style.display = "none";
+        registerBtn.textContent = "History";
+        registerBtn.href = "history.php";
+        registerBtn.className = "bg-gray-600 text-white px-3 py-1 rounded hover:bg-gray-700";
+
+        // Show profile circle with first letter
+        profileBtn.textContent = email.charAt(0).toUpperCase();
+        profileBtn.classList.remove("hidden");
+
+        // Toggle dropdown on click
+        profileBtn.addEventListener("click", () => {
+          profileDropdown.classList.toggle("hidden");
+        });
+
+        // Logout functionality
+        logoutBtn.addEventListener("click", () => {
+          fetch("logout.php").then(() => {
+            location.reload();
+          });
+        });
+
+        // Close dropdown if clicked outside
+        window.addEventListener("click", function (e) {
+          if (!document.getElementById("profileMenuContainer").contains(e.target)) {
+            profileDropdown.classList.add("hidden");
+          }
+        });
+      }
+    });
+</script>
+
+
+
+
+<!--history-->
+
+<!--Rules -->
+         
+    <script>
+  let rules = [];
+
+  fetch("rules.json")
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to fetch rules");
+      return response.json();
+    })
+    .then(data => {
+      rules = data;
+      console.log("Loaded rules:", rules.length);
+    })
+    .catch(error => {
+      console.error("Failed to load rules:", error);
+    });
+
+  function getHelp() {
+    if (rules.length === 0) {
+      alert("Rules are still loading. Please try again shortly.");
+      return;
+    }
+
+    const input = document.getElementById("userQuery").value.toLowerCase().trim();
+    const suggestionsBox = document.getElementById("suggestions");
+    const suggestionsList = document.getElementById("suggestionsList");
+
+    suggestionsList.innerHTML = "";
+    suggestionsBox.classList.remove("hidden");
+
+    let matched = false;
+
+    for (const rule of rules) {
+      if (rule.keywords.some(keyword => input.includes(keyword.toLowerCase()))) {
+        matched = true;
+        rule.replies.forEach(reply => {
+          const li = document.createElement("li");
+          li.textContent = reply;
+          suggestionsList.appendChild(li);
+        });
+      }
+    }
+
+    if (!matched) {
+      const li = document.createElement("li");
+      li.textContent = "Sorry, we couldn't identify the issue. Please describe it more clearly.";
+      suggestionsList.appendChild(li);
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "keywords": [
+      "scam",
+      "scammed",
+      "fraud"
+    ],
+    "replies": [
+      "Report the scam to the platform immediately.",
+      "Block and avoid any further contact with the scammer.",
+      "Change your passwords if you shared any information."
+    ]
+  },
+  {
+    "keywords": [
+      "hacked",
+      "account hacked",
+      "unauthorized"
+    ],
+    "replies": [
+      "Change your password immediately.",
+      "Enable 2-factor authentication (2FA).",
+      "Check recent activity and remove unknown devices."
+    ]
+  },
+  {
+    "keywords": [
+      "account",
+      "recovery",
+      "lost"
+    ],
+    "replies": [
+      "Try using the 'Forgot Password' option.",
+      "Use backup codes or linked email/phone to recover.",
+      "Contact the support team of the platform."
+    ]
+  },
+  {
+    "keywords": [
+      "dark web",
+      "leaked",
+      "exposed"
+    ],
+    "replies": [
+      "Use a dark web scan tool to check if your data is compromised.",
+      "Change passwords and enable 2FA for all accounts.",
+      "Consider monitoring services if sensitive info is leaked."
+    ]
+  },
+  {
+    "keywords": [
+      "delete",
+      "remove account"
+    ],
+    "replies": [
+      "Visit the official platform settings to delete your account.",
+      "Revoke third-party access from other apps linked to it."
+    ]
+  },
+  {
+    "keywords": [
+      "fake profile",
+      "impersonation",
+      "identity theft",
+      "pretending",
+      "copying my profile"
+    ],
+    "replies": [
+      "Report impersonation to the concerned service provider.",
+      "Submit identity proof to reclaim your account.",
+      "Consider filing a complaint with cybercrime authorities."
+    ]
+  }
+]

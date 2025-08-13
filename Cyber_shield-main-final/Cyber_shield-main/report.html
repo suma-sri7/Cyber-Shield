@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Report a Scam</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <div class="min-h-screen flex items-center justify-center px-4">
+    <div class="bg-white rounded-2xl shadow-xl max-w-xl w-full p-8 text-center animate-fade-in">
+      <h1 class="text-2xl font-bold text-red-600 mb-2">🚨 Report a Scam</h1>
+      <p class="text-gray-600 mb-6">Received a suspicious message or link? Follow the steps below.</p>
+
+      <ul class="text-left list-disc pl-6 space-y-2">
+        <li>Do not click on any suspicious links or download files.</li>
+        <li>Take a screenshot or copy the message for proof.</li>
+        <li>Forward emails to: <code>report@phishing.gov.in</code></li>
+        <li>Report phone fraud to 1930 (India).</li>
+        <li>Block the sender and mark the message as spam/phishing.</li>
+      </ul>
+
+      <div class="mt-6">
+        <a href="index.html" class="text-red-600 hover:underline text-sm">← Back to Help Desk</a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.6s ease-out;
+    }
+  </style>
+</body>
+</html>
